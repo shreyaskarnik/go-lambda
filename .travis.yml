@@ -1,15 +1,11 @@
 ---
   language: go
-  sudo: false
+  sudo: required
   go:
-    - 1.x
-    - tip
-  env:
-    global:
-      - GO15VENDOREXPERIMENT=1
-  matrix:
-    allow_failures:
-      - go: tip
-    fast_finish: true
+    - "1.9"
+    - "1.10"
+    - master
+  before_install:
+    - go get -u github.com/golang/dep/cmd/dep
   script:
     - make test
