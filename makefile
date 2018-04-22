@@ -1,7 +1,7 @@
 clean:
 	rm -rfv main
 build: clean dep test
-	GOOS=linux go build -o main
+	GOOS=linux GOARCH=amd64 go build -o main
 dep:
 	dep ensure
 test: dep
