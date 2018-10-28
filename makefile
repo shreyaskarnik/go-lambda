@@ -1,8 +1,9 @@
 clean:
-	rm -rfv main
+	@go mod tidy
+	@rm -rfv main *.zip
 build: clean test
-	GOOS=linux GOARCH=amd64 go build -o main
+	@GOOS=linux GOARCH=amd64 go build -o main
 test:
-	go test
-zippy: build
-	zip deployment.zip main
+	@go test
+zippy: clean build
+	@zip deployment.zip main
