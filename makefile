@@ -1,10 +1,8 @@
 clean:
 	rm -rfv main
-build: clean dep test
+build: clean test
 	GOOS=linux GOARCH=amd64 go build -o main
-dep:
-	dep ensure
-test: dep
+test:
 	go test
 zippy: build
 	zip deployment.zip main
