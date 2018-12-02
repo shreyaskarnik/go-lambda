@@ -1,8 +1,7 @@
----
-  language: go
-  sudo: required
-  go:
-    - "1.11"
-    - master
-  script:
-    - GO111MODULE=on make test
+language: go
+sudo: required
+go:
+  - "1.11.2"
+  - master
+script:
+  - GO111MODULE=on make test
