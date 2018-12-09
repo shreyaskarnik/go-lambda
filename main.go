@@ -1,15 +1,9 @@
 package main
 
 import (
-	"errors"
 	"fmt"
 
 	"github.com/aws/aws-lambda-go/lambda"
-)
-
-var (
-	// ErrNameNotProvided is thrown when a name is not provided
-	ErrNameNotProvided = errors.New("no name was provided in the HTTP body")
 )
 
 // Request is the struct for Request Object
