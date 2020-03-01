@@ -13,3 +13,4 @@
 vendor/
 deployment.zip
 main
+go-lambda
