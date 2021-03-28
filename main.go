@@ -8,8 +8,8 @@ import (
 
 // Request is the struct for Request Object
 type Request struct {
-	ID    float64 `json:"id"`
 	Value string  `json:"value"`
+	ID    float64 `json:"id"`
 }
 
 // Response is the struct Response Object

@@ -10,9 +10,9 @@ import (
 
 func TestHandler(t *testing.T) {
 	tests := []struct {
+		err     error
 		request Request
 		expect  Response
-		err     error
 	}{
 		{
 			// Test that the handler responds with the correct response
